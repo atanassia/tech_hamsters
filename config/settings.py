@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Local
+
+    #Installed
+    'user_visit',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'user_visit.middleware.UserVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -131,3 +136,10 @@ MEDIA_ROOT = BASE_DIR / 'mediafiles'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import email_data as em
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = em.EMAIL_HOST_USER_DATA
+EMAIL_HOST_PASSWORD = em.EMAIL_HOST_PASSWORD_DATA
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
