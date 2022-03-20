@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Написать блог{% endblock %}
+
+
+{% block main %}
+    <div class="container" style="margin-top:2%;">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.media }} 
+            {{ form.as_p }}
+            <div class="btn_reg">
+                <button type="submit" class="btn_filled">Отправить</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

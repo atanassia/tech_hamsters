@@ -1,0 +1,28 @@
+{% extends "layout/base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+
+{% block main %}
+    <div class="container" style="margin-top:2%;">
+        <div class="row">
+            <div class="col">
+                <div class="user_all_data">
+                    <a class = "user_info" href="{% url 'blog:post_user' post.author %}">{{ post.author }}</a>
+                    <span class = "user_info_date" ><time datetime="{{ post.created }}" title="{{ post.created }}">{{ post.created }}</time></span>
+                </div>
+                <div class="mb-4" >
+                    <h3>
+                        <a  class="blog_h3" href="{% url 'blog:post_user_detail' post.author post.slug %}"
+                        title="{{ post.title }}">{{ post.title }}</a>
+                    </h3>
+                    <div class="card-body">
+                        <p>
+                            {{post.body|safe}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

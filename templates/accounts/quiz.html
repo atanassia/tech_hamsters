@@ -1,0 +1,70 @@
+{% extends "layout/base.html" %}
+
+{% load static %}
+
+{% block title %}Тест{% endblock %}
+
+{% block main %}
+
+    <div class="container-xl main">
+        <div class="title_page">Осталось несколько шагов...</div>
+        <div class="container_form quiz">
+            <div class="line_back"><img src="{% static 'img/Line_left.png' %}"></div>
+            <div class="progress_line">
+                <div class="progress_line_green"></div>
+            </div>
+            <div class="step-desc">
+                Шаг 1 из 3
+            </div>
+            <form class="reg_form" action="" method="POST">
+                {% csrf_token %}
+                <div class="title_desc">Выберите портфель</div>
+                <div class="wrap_card portfel line1">
+                    <div class="card bg1" data-portfel="conservat">
+                        <div class="card_name">Консервативный</div>
+                        <input class="horisont_input" name="q1" type="radio" value="passive">
+                    </div>
+                    <div class="card bg2">
+                        <div class="card_name" data-portfel="balance">Сбалансированный</div>
+                        <input class="horisont_input" name="q1" type="radio" value="normal">
+                    </div>
+                    <div class="card bg3">
+                        <div class="card_name" data-portfel="risk">Рискованный</div>
+                        <input class="horisont_input" name="q1" type="radio" value="aggressive">
+                    </div>
+                </div>
+                <div class="wrap_card  line2">
+
+                    <div class="card_horisont">
+                        <div class="card_name">6<br>месяцев</div>
+                        <input class="horisont_input" name="q2" type="radio" value="6_months">
+                    </div>
+                    <div class="card_horisont">
+                        <div class="card_name">12<br>месяцев</div>
+                        <input class="horisont_input" name="q2" type="radio" value="12_months">
+                    </div>
+                    <div class="card_horisont">
+                        <div class="card_name">3<br>года</div>
+                        <input class="horisont_input" name="q2" type="radio" value="3_years">
+                    </div>
+                </div>
+                <div class="wrap_card  line3">
+                    <div class="input_range">
+                        <input name="sum_in_mounth" type="range" min="1000" max="100000" value="50000" step="1000"
+                            oninput="fun1()" id="r1">
+                    </div>
+                    <div class="range_number">
+                        <div class="card_name" id="one">50 000 &#8381; </div>
+                    </div>
+                </div>
+                <div class="btn_reg">
+                    <a class="btn_filled next">Далее</a>
+                    <button type="submit" class="btn_filled send">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'script/script.js' %}"></script>
+
+{% endblock %}

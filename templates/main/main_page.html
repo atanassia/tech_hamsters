@@ -1,0 +1,245 @@
+{% extends "layout/base.html" %}
+
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block main %}
+        <div class="container-xl main" style="padding-top: 10vh;">
+            <div class="row">
+                <!-- <div class="col-10 col-lg-5" style="margin: auto;">
+                    <div class="body_bord_pay">
+                        <div class="title_pay">Ближайшие покупки акций</div>
+                        <table class="table_pay">
+                            <tr class="th">
+                                <td>Название</td>
+                                <td>Дата
+                                    покупки</td>
+                                <td>Кол-во</td>
+                                <td>Цена ₽</td>
+                                <td>Стоимость ₽</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.03.22</td>
+                                <td>3</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.03.22</td>
+                                <td>3</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.03.22</td>
+                                <td>3</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="body_bord_pay">
+                        <div class="title_pay">Доходность акций</div>
+                        <table class="table_pay">
+                            <tr class="th">
+                                <td>Название</td>
+                                <td>Цена ₽</td>
+                                <td>Доходность %</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.81</td>
+                                <td>59.48</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> -->
+                <div class="col-12 col-lg-5">
+                    <img src="{% static 'img/img_lang.png' %}" style="width: 100%;">
+                </div>
+                <div class="col-12 col-lg-6 offset-lg-1 col-xl-6 rigth_q">
+                    <div class="title_page text-start d-flex align-items-center">Мы поможем Вам составить план покупок
+                        облигаций и акций на
+                        длительеый срок
+                    </div>
+                </div>
+            </div>
+            <div class="row lend_pad flex-wrap-reverse">
+                <div class="col-12 col-lg-6 offset-lg-1 col-xl-6 rigth_q">
+                    <div class="title_page text-start d-flex align-items-center">Точные прогнозы с высоким доходом
+                    </div>
+                </div>
+                <div class="col-10 col-lg-5" style="margin: auto;">
+                    <div class="body_bord_pay">
+                        <div class="title_pay">Ближайшие покупки акций</div>
+                        <table class="table_pay">
+                            <tr class="th">
+                                <td>Название</td>
+                                <td>Дата
+                                    покупки</td>
+                                <td>Кол-во</td>
+                                <td>Цена ₽</td>
+                                <td>Стоимость ₽</td>
+                            </tr>
+                            <tr>
+                                <td>SPE</td>
+                                <td>19.03.22</td>
+                                <td>1</td>
+                                <td>190.81</td>
+                                <td>190.81</td>
+                            </tr>
+                            <tr>
+                                <td>BABA</td>
+                                <td>20.03.22</td>
+                                <td>3</td>
+                                <td>500.37</td>
+                                <td>1501.04</td>
+                            </tr>
+                            <tr>
+                                <td>COUR</td>
+                                <td>20.03.22</td>
+                                <td>3</td>
+                                <td>382</td>
+                                <td>1234</td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td>21.03.22</td>
+                                <td>1</td>
+                                <td>190.81</td>
+                                <td>190.81</td>
+                            </tr>
+                            <tr>
+                                <td>YNDX</td>
+                                <td>22.03.22</td>
+                                <td>3</td>
+                                <td>500.37</td>
+                                <td>1501.04</td>
+                            </tr>
+                            <tr>
+                                <td>TAL</td>
+                                <td>23.03.22</td>
+                                <td>3</td>
+                                <td>382</td>
+                                <td>5231.05</td>
+                            </tr>
+                            <tr>
+                                <td>GM</td>
+                                <td>22.03.22</td>
+                                <td>3</td>
+                                <td>500.37</td>
+                                <td>1781.04</td>
+                            </tr>
+                            <tr>
+                                <td>RiG</td>
+                                <td>23.03.22</td>
+                                <td>3</td>
+                                <td>382</td>
+                                <td>2035.5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="body_bord_pay">
+                        <div class="title_pay">Доходность акций</div>
+                        <table class="table_pay">
+                            <tr class="th">
+                                <td>Название</td>
+                                <td>Цена ₽</td>
+                                <td>Доходность %</td>
+                            </tr>
+                            <tr>
+                                <td>RiG</td>
+                                <td>1556.81</td>
+                                <td>32.48</td>
+                            </tr>
+                            <tr>
+                                <td>TAL</td>
+                                <td>1901.81</td>
+                                <td>10.08</td>
+                            </tr>
+                            <tr>
+                                <td>TPIC</td>
+                                <td>325.81</td>
+                                <td>37.13</td>
+                            </tr>
+                            <tr>
+                                <td>BAC</td>
+                                <td>1354.81</td>
+                                <td>28.17</td>
+                            </tr>
+                            <tr>
+                                <td>TAL</td>
+                                <td>1901.81</td>
+                                <td>10.08</td>
+                            </tr>
+                            <tr>
+                                <td>ECOM</td>
+                                <td>7568.96</td>
+                                <td>37.13</td>
+                            </tr>
+                            <tr>
+                                <td>BAC</td>
+                                <td>1354.81</td>
+                                <td>28.17</td>
+                            </tr>
+                            <tr>
+                                <td>TAL</td>
+                                <td>1901.81</td>
+                                <td>10.08</td>
+                            </tr>
+                            <tr>
+                                <td>ECOM</td>
+                                <td>7568.96</td>
+                                <td>37.13</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row lend_pad">
+
+                <div class="col-12 col-lg-5" style="margin: auto;">
+                    <img src="{% static 'img/mob.png' %}" width="100%">
+
+                </div>
+                <div class="col-12 col-lg-6 offset-lg-1 col-xl-6 rigth_q">
+                    <div class="title_page text-center d-flex align-items-center">Следите за активами в личном кабинете!
+                    </div>
+                </div>
+            </div>
+            <div class="row lend_pad">
+                <div class="col-12 col-lg-6 offset-lg-1 col-xl-6 rigth_q">
+                    <div class="title_page text-center d-flex align-items-center flex-column">Мы в Telegram!<br>
+                        <span class="desc">Наш <a href="http://t.me/Digital_Hamster_bot" target="_blank"
+                                style="text-decoration: none; color: #50B848;">бот</a>
+                            спланирует для тебя
+                            список покупок ценных бумаг на ближайшее
+                            время.</span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5" style="margin: auto;">
+                    <img src="{% static 'img/GroupTelega.png' %}" width="100%">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="{% url 'accounts:register' %}" class="link-globus" style="max-width: 300px;">Создать аккаунт</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}

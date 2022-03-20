@@ -1,0 +1,37 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block main %}
+<div class="container">
+    
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show mt-5" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <div class="container-xl main">
+        <div class="title_page">Логин</div>
+        <div class="container_form">
+            <form class="needs-validation reg_form" method="POST" action="" novalidate>
+                {% csrf_token %}
+                <div class="reg_row">
+                    <label>Никнейм:</label>
+                    <input type="username" class="reg_input" id="inputUsername" name = "username"  placeholder = "Имя пользователя" required>
+                </div>
+                <div class="reg_row">
+                    <label>Пароль:</label>
+                    <input type="password" class="reg_input" id="inputPassword" name = "password" required>
+                </div>
+                <div class="btn_reg">
+                    <button type="submit" class="btn_filled">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

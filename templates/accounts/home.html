@@ -1,0 +1,240 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block main %}
+    <div class="container-xl main">
+        <div class="title_page">Ваши активы</div>
+        <div class="row">
+            <div class="col-12 col-lg-1">
+                <div class="nav_menu">
+                    <div class="menu_icon active">
+                        <a href="{% url 'accounts:home' %}">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 10.2564H8.88889V0H0V10.2564Z" fill="#FFFFFF" />
+                                <path d="M0 18.4616H8.88889V12.3077H0V18.4616Z" fill="#FFFFFF" />
+                                <path d="M11.1113 18.4616H20.0002V8.2052H11.1113V18.4616Z" fill="#FFFFFF" />
+                                <path d="M11.1113 0V6.15385H20.0002V0H11.1113Z" fill="#FFFFFF" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="{% url 'accounts:quiz_page' %}">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM20 16H8V4H20V16ZM13.51 10.16C13.92 9.43 14.69 9 15.14 8.36C15.62 7.68 15.35 6.42 14 6.42C13.12 6.42 12.68 7.09 12.5 7.65L11.13 7.08C11.51 5.96 12.52 5 13.99 5C15.22 5 16.07 5.56 16.5 6.26C16.87 6.86 17.08 7.99 16.51 8.83C15.88 9.76 15.28 10.04 14.95 10.64C14.82 10.88 14.77 11.04 14.77 11.82H13.25C13.26 11.41 13.19 10.74 13.51 10.16ZM12.95 13.95C12.95 13.36 13.42 12.91 14 12.91C14.59 12.91 15.04 13.36 15.04 13.95C15.04 14.53 14.6 15 14 15C13.42 15 12.95 14.53 12.95 13.95Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="{% url 'blog:post_list' %}">
+                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.1828 12.8259V9.13846C14.1828 7.45612 12.8235 6.09231 11.1468 6.09231H4.22656V2.56518C4.22656 1.14847 5.37121 0 6.78319 0H18.7141C20.1261 0 21.2708 1.14847 21.2708 2.56518V10.2607L21.2877 15.0143C21.2886 15.2947 21.0629 15.5228 20.7835 15.5238C20.6486 15.5243 20.5192 15.4707 20.4239 15.3751L17.8832 12.8259H14.1828Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 15.2307V10.1538C0 9.03225 0.906176 8.12305 2.024 8.12305H10.12C11.2378 8.12305 12.144 9.03225 12.144 10.1538V15.2307C12.144 16.3523 11.2378 17.2615 10.12 17.2615H2.14112L0.882341 18.4704C0.680456 18.6642 0.360151 18.6572 0.16692 18.4546C0.0767801 18.3601 0.0264659 18.2344 0.0264659 18.1036V15.56C0.00905315 15.4528 0 15.3428 0 15.2307ZM4.56912 11.1692C4.28967 11.1692 4.06312 11.3965 4.06312 11.6769C4.06312 11.9573 4.28967 12.1846 4.56912 12.1846H9.62912C9.90858 12.1846 10.1351 11.9573 10.1351 11.6769C10.1351 11.3965 9.90858 11.1692 9.62912 11.1692H4.56912ZM7.09912 13.7077C7.09912 13.4273 7.32567 13.2 7.60512 13.2H9.62912C9.90858 13.2 10.1351 13.4273 10.1351 13.7077C10.1351 13.9881 9.90858 14.2154 9.62912 14.2154H7.60512C7.32567 14.2154 7.09912 13.9881 7.09912 13.7077Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="{% url 'accounts:datalens_analytics' %}">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z"
+                                    fill="white" />
+                                <path d="M9 12H7V17H9V12Z" fill="white" />
+                                <path d="M17 7H15V17H17V7Z" fill="white" />
+                                <path d="M13 14H11V17H13V14Z" fill="white" />
+                                <path d="M13 10H11V12H13V10Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="{% url 'accounts:support' %}">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.3583 7.5H17.5C18.8807 7.5 20 8.61929 20 10C20 11.3807 18.8807 12.5 17.5 12.5L17.4283 12.5C17.2124 12.5009 17.0177 12.6298 16.9326 12.8283C16.8396 13.0391 16.8825 13.2757 17.0309 13.4274L17.0806 13.4771C17.55 13.946 17.8138 14.5823 17.8138 15.2458C17.8138 15.9094 17.55 16.5457 17.0812 17.0139C16.6123 17.4834 15.976 17.7471 15.3125 17.7471C14.649 17.7471 14.0127 17.4834 13.5441 17.0143L13.5006 16.9707C13.3423 16.8159 13.1057 16.773 12.8949 16.866C12.6965 16.951 12.5675 17.1458 12.5667 17.3583V17.5C12.5667 18.8807 11.4474 20 10.0667 20C8.68595 20 7.56667 18.8807 7.56667 17.5C7.56169 17.2221 7.42109 17.0256 7.16353 16.9291C6.96095 16.8396 6.72435 16.8825 6.57259 17.0309L6.52292 17.0806C6.054 17.55 5.41769 17.8138 4.75417 17.8138C4.09064 17.8138 3.45434 17.55 2.98607 17.0812C2.51663 16.6123 2.25286 15.976 2.25286 15.3125C2.25286 14.649 2.51663 14.0127 2.98574 13.5441L3.02928 13.5006C3.18412 13.3423 3.22702 13.1057 3.13405 12.8949C3.049 12.6965 2.85424 12.5675 2.64167 12.5667H2.5C1.11929 12.5667 0 11.4474 0 10.0667C0 8.68595 1.11929 7.56667 2.5 7.56667C2.77787 7.56169 2.97445 7.42109 3.07095 7.16353C3.16035 6.96095 3.11745 6.72435 2.96908 6.57259L2.91941 6.52292C2.44996 6.054 2.18619 5.41769 2.18619 4.75417C2.18619 4.09064 2.44996 3.45434 2.91875 2.98607C3.38767 2.51663 4.02398 2.25286 4.6875 2.25286C5.35102 2.25286 5.98733 2.51663 6.45592 2.98574L6.49939 3.02928C6.65768 3.18412 6.89428 3.22702 7.09686 3.13761L7.2165 3.11239C7.38935 3.01877 7.49921 2.83779 7.5 2.64167V2.5C7.5 1.11929 8.61929 0 10 0C11.3807 0 12.5 1.11929 12.5 2.5L12.5 2.57168C12.5009 2.78757 12.6298 2.98234 12.8365 3.07095C13.0391 3.16035 13.2757 3.11745 13.4274 2.96908L13.4771 2.91941C13.946 2.44996 14.5823 2.18619 15.2458 2.18619C15.9094 2.18619 16.5457 2.44996 17.0139 2.91875C17.4834 3.38767 17.7471 4.02398 17.7471 4.6875C17.7471 5.35102 17.4834 5.98733 17.0143 6.45592L16.9707 6.49939C16.8159 6.65768 16.773 6.89428 16.8624 7.09686L16.8876 7.2165C16.9812 7.38935 17.1622 7.49921 17.3583 7.5Z"
+                                fill="white" />
+                            <path
+                                d="M12.8337 9.99996C12.8337 11.5648 11.5651 12.8333 10.0003 12.8333C8.43552 12.8333 7.16699 11.5648 7.16699 9.99996C7.16699 8.43515 8.43552 7.16663 10.0003 7.16663C11.5651 7.16663 12.8337 8.43515 12.8337 9.99996Z"
+                                fill="#D2D2D2" stroke="#50B848" />
+                        </svg>
+                    </a>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="{% url 'accounts:logout' %}">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                            viewBox="0 0 24 24" width="24px" fill="#ffffff">
+                            <g>
+                                <path d="M0,0h24v24H0V0z" fill="none" style="fill: none!important;" />
+                            </g>
+                            <g>
+                                <path
+                                    d="M17,8l-1.41,1.41L17.17,11H9v2h8.17l-1.58,1.58L17,16l4-4L17,8z M5,5h7V3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h7v-2H5V5z" />
+                            </g>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            {% if user_data %}
+            <div class="col-12 col-lg-5">
+                <div class="body_bord_pay" style="padding-top: 0;">
+                    <div class="table_pay_div">
+                        <div class="title_pay" style="margin-top: 20px;">Ближайшие покупки акций</div>
+                        <table class="table_pay">
+                            <tr class="th">
+                                <td>Дата
+                                    покупки</td>
+                                <td>Тикет</td>
+                                <td>Кол-во</td>
+                                <td>Название</td>
+                                <td>Цена ₽</td>
+                                <td>Стоимость ₽</td>
+                            </tr>
+                            {% for data_list in datas_akzii %}
+                                <tr>
+                                    {% for data in data_list %}
+                                        <td>{{ data }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <div class="body_bord_pay">
+                    <div class="table_pay_div" style="padding-bottom: 0;">
+                        <iframe
+                            style="width:100%;border:0;overflow:hidden;background-color:transparent;height:317.469px"
+                            scrolling="no"
+                            src="https://fortrader.org/informers/getInformer?st=1&cat=7&title=%D0%9A%D1%83%D1%80%D1%81%D1%8B%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%20%D0%A6%D0%91%20%D0%A0%D0%A4&texts=%7B%22toolTitle%22%3A%22%D0%92%D0%B0%D0%BB%D1%8E%D1%82%D0%B0%22%2C%22todayCourse%22%3A%22RUB%22%7D&mult=1&showGetBtn=0&hideHeader=0&hideDate=0&w=0&codes=1&colors=titleTextColor%3D454545%2CtitleBackgroundColor%3Dfff%2CthTextColor%3D454545%2CthBackgroundColor%3Dfff%2CsymbolTextColor%3D454545%2CtableTextColor%3D454545%2CborderTdColor%3Dffffff%2CtableBorderColor%3Dffffff%2CprofitTextColor%3D89bb50%2CprofitBackgroundColor%3Deaf7e1%2ClossTextColor%3Dff1616%2ClossBackgroundColor%3Df6e1e1%2CoddBackgroundTrColor%3Dfff%2CevenBackgroundTrColor%3Dfff%2CdataTextColor%3D787878%2CdataBackgroundColor%3Dfff%2CinformerLinkTextColor%3D5e5e5e%2CinformerLinkBackgroundColor%3Df1f1f1&items=2%2C21%2C30%2C11&columns=todayCourse&toCur=11111"></iframe>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-lg-6 col-xl-6 rigth_q">
+                <div class="right_block green">
+                    <div class="circle"></div>
+                    <div class="text">Инвестированно в<br>этом месяце:</div>
+                    <div class="text_summ">0 ₽</div>
+                </div>
+                <div class="right_block green">
+                    <div class="circle"></div>
+                    <div class="text">Ваш портфель:</div>
+                    <div class="text_summ">
+                        {% if user_data.portfolio_type == "passive" %}
+                            Консервативный
+                        {% elif user_data.portfolio_type == "normal" %}
+                            Сбалансированный
+                        {% elif user_data.portfolio_type == "aggressive" %}
+                            Рискованный
+                        {% endif %}
+                    </div>
+                    
+                </div>
+                <div class="right_block green">
+                    <div class="circle"></div>
+                    <div class="text">Сумма<br>инвестиций</div>
+                    <div class="text_summ">{{ user_data.investment_amount }}</div>
+                </div>
+                <div class="right_block green">
+                    <div class="circle"></div>
+                    <div class="text">Горизонт инвестирования:</div>
+                    <div class="text_summ">
+                        {% if user_data.investment_horizon == "6_months" %}
+                            6 месяцев
+                        {% elif user_data.investment_horizon == "12_months" %}
+                            1 год
+                        {% elif user_data.investment_horizon == "3_years" %}
+                            3 года
+                        {% endif %}
+                    </div>
+                </div>
+                <div style="margin-top: 25px; width: 100%;">
+                    <div class="body_bord_pay dark" style="padding-top: 0px;">
+                        <div class="table_pay_div dark">
+                            <div class="title_pay dark" style="margin-top: 20px;">Ближайшие покупки облигаций</div>
+                            <table class="table_pay dark">
+                                <tr class="th">
+                                    <td>Дата
+                                        покупки</td>
+                                    <td>Тикер</td>
+                                    <td>Название</td>
+                                    <td>Номинал</td>
+                                    <td>Прибыль в год %</td>
+                                    <td>Стоимость ₽</td>
+                                </tr>
+                                {% for data_list in datas_oblig %}
+                                    <tr>
+                                        {% for data in data_list %}
+                                            <td>{{ data }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col-12 col-lg-6 col-xl-6 rigth_q">
+            <p style="text-align:center; font-size:20px; color:#333333; font-weight:500;">Нет данных для вас, <a href="#" style="text-decoration:none; color: #50B848;">пройтите тест</a></p>
+        </div>
+            {% endif %}
+        </div>
+        {% comment %} <div class="row">
+            <div class="col-12">
+                <div style="margin-top: 25px; width: 100%;">
+                    <div style="margin-top: 25px; width: 100%;">
+                        <div class="body_bord_pay dark" style="padding-top: 0px;">
+                            <div class="table_pay_div dark">
+                                <div class="title_pay dark" style="margin-top: 20px; margin-bottom: 20px;">
+                                    Доходность облигаций</div>
+                                <table class="table_pay dark">
+                                    <tr class="th">
+                                        <td>Название</td>
+                                        <td>Цена ₽</td>
+                                        <td>Доходность %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SPE</td>
+                                        <td>19.81</td>
+                                        <td>59.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SPE</td>
+                                        <td>19.81</td>
+                                        <td>59.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SPE</td>
+                                        <td>19.81</td>
+                                        <td>59.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SPE</td>
+                                        <td>19.81</td>
+                                        <td>59.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SPE</td>
+                                        <td>19.81</td>
+                                        <td>59.48</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+{% endblock %}

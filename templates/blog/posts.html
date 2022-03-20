@@ -1,0 +1,39 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Блог{% endblock %}
+
+
+{% block main %}
+    <a href="{% url 'blog:post_add' %}" class="link-globus button_add_post">Создать</a>
+    {% if posts %}
+    <div class="container" style="margin-top:2%;">
+        {% for post in posts %}
+            <div class="row body_bord_blog">
+                <div class="col">
+                    <div class="user_all_data">
+                        <a class = "user_info" href="{% url 'blog:post_user' post.author %}">{{ post.author }}</a>
+                        <span class = "user_info_date" ><time datetime="{{ post.created }}" title="{{ post.created }}">{{ post.created }}</time></span>
+                    </div>
+                    <div class="mb-4" >
+                        <h3 class="blogs_h3">
+                            <a  class="blog_h3" href="{% url 'blog:post_user_detail' post.author post.slug %}"
+                            title="{{ post.title }}">{{ post.title }}</a>
+                        </h3>
+                        <div class="card-body">
+                            <p class="">
+                                {{post.body|safe|truncatechars:600}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 category_title emoji_search text-center">
+            <p>｡◕‿‿◕｡</p> 
+            <p>~~~ а постов еще нет ~~~</p>
+        </div>
+    {% endif %}
+
+{% endblock %}
