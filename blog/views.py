@@ -37,6 +37,6 @@ def post_add(request):
                                     title=title,
                                     slug = slugify(title),
                                     body=body)
-        return redirect('blog:post_list')
+        return render(request, 'blog/posts.html')
     context = {'form':form}
     return render(request, 'blog/create_post.html', context)

@@ -13,3 +13,6 @@ ___Стек___:
 1. Python
 2. Django
 3. HTML\CSS\Bootstrap
+
+
+https://atanassia2.pythonanywhere.com/
